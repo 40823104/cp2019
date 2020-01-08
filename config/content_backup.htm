@@ -125,8 +125,7 @@ main() {
   double h = 0.1;
   rungeKutta(t0, x0, v0, t, h);
 }</pre>
-<p><br/><br/></p>
-<h1>W7</h1>
+<p><br/><br/></p><h1>W7</h1>
 <p>有阻尼係數</p>
 <p><img alt="" height="344" src="/images/計概1.png" width="586"/></p>
 <p></p>
@@ -188,4 +187,33 @@ document.getElementById("iframe").height = 600 ;
 <p><img alt="" height="1002" src="/images/0cfae2a1caac6bde6731953b4f225395.jpg" width="564"/></p>
 <p><img alt="" height="960" src="/images/27465a5653a04af6f90bea4c8ea3d5f3.jpg" width="539"/></p>
 <h1>測試</h1>
-<p></p>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823104&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823104&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823104&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<p>純 Dart 程式</p>
+<p><button onclick="getDart('hello')">hello</button></p>
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823104&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/hello&amp;theme=dark" width="800"></iframe></p>
